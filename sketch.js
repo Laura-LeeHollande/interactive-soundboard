@@ -20,15 +20,15 @@ function setup() {
   canvas = createCanvas(weight, height);
 
   /* ---------------------------- Load sound files ---------------------------- */
-  arcadeRetroSong = loadSound('arcadeRetroSong.wav');
-  barking = loadSound('barking.wav');
-  fastPunch = loadSound('fastPunch.wav');
-  fastTransition = loadSound('fastTransition.wav');
-  retroNotif = loadSound('retroNotif.wav');
-  roar = loadSound('roar.wav');
-  toyWhistle = loadSound('toyWhistle.wav');
-  transition = loadSound('transition.wav');
-  whoosh = loadSound('whoosh.wav');
+  arcadeRetroSong = loadSound('sound/arcadeRetroSong.wav');
+  barking = loadSound('sound/barking.wav');
+  fastPunch = loadSound('sound/fastPunch.wav');
+  fastTransition = loadSound('sound/fastTransition.wav');
+  retroNotif = loadSound('sound/retroNotif.wav');
+  roar = loadSound('sound/roar.wav');
+  toyWhistle = loadSound('sound/toyWhistle.wav');
+  transition = loadSound('sound/transition.wav');
+  whoosh = loadSound('sound/whoosh.wav');
 
   let spacing = 20;
 
