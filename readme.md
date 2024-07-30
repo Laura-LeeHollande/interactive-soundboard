@@ -1,11 +1,9 @@
 # Sound Board Project
 
-This project is a web-based sound board application[^1] that allows users to play various sound effects by clicking on buttons. The project utilizes the p5.js library[^2] for rendering the canvas and handling sound playback.
-
-## Table of Contents
+<details>
+  <summary>📖 Table of Contents</summary>
 
 - [Sound Board Project](#sound-board-project)
-  - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Project Structure](#project-structure)
@@ -15,8 +13,10 @@ This project is a web-based sound board application[^1] that allows users to pla
     - [CSS Styling](#css-styling)
   - [Contributing](#contributing)
   - [Acknowledgements and glossary](#acknowledgements-and-glossary)
-    - [Acknowledgements](#acknowledgements)
-    - [Glossary](#glossary)
+  
+</details>
+
+This project is a web-based sound board application[^1] that allows users to play various sound effects by clicking on buttons. The project utilizes the p5.js library[^2] for rendering the canvas and handling sound playback.
 
 ## Installation
 
@@ -25,7 +25,7 @@ To run this project locally, follow these steps:
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/yourusername/sound-board.git
+    git clone https://github.com/Laura-LeeHollande/interactive-soundboard.git
     ```
 
 2. Navigate to the project directory:
@@ -74,7 +74,7 @@ The project includes a `styles.css` file to handle the visual styling of the web
 
 ## Contributing
 
-If you would like to contribute to this project, please follow these steps:
+If you would like to [contribute](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project) to this project, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature-branch`).
@@ -87,14 +87,20 @@ Thank you.
 
 ## Acknowledgements and glossary
 
-### Acknowledgements
+<details>
+  <summary>Acknowledgements</summary>
 
 - [p5.js](https://p5js.org/) - The library used for rendering and sound playback.
 - [Favicon.io](https://favicon.io/) - For providing icons used in the project.
 - [Mixkit](https://mixkit.co/free-sound-effects/) - For providing sound effects used in the project.
 - [Codedex](https://www.codedex.io/projects/build-an-interactive-soundboard-with-p5js) - For providing the project idea and structure.
 
-### Glossary
+</details>
+
+<details>
+  <summary>Glossary</summary>
 
 [^1]: A sound board is a device or software application that allows users to play various sound effects by clicking on buttons.
 [^2]: p5.js is a JavaScript library for creative coding.
+
+</details>
