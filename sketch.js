@@ -1,3 +1,4 @@
+/* ----------------------------- Variable Setup ---------------------------- */
 let height = window.innerHeight;
 let weight = window.innerWidth;
 
@@ -17,7 +18,8 @@ let btn_bottom = [];
 
 function setup() {
   canvas = createCanvas(weight, height);
-  /* ------------------------------- Load Songs ------------------------------- */
+
+  /* ---------------------------- Load sound files ---------------------------- */
   arcadeRetroSong = loadSound('arcadeRetroSong.wav');
   barking = loadSound('barking.wav');
   fastPunch = loadSound('fastPunch.wav');
@@ -30,17 +32,18 @@ function setup() {
 
   let spacing = 20;
 
-  let b1 = new Button(weight / 3, height / 3 - spacing, 200, 80, color(226, 132, 19), color(244, 190, 124), arcadeRetroSong);
-  let b2 = new Button(weight / 2, height / 3 - spacing, 200, 80, color(0, 159, 183), color(153, 241, 255), barking);
-  let b3 = new Button(2 * weight / 3, height / 3 - spacing, 200, 80, color(145, 145, 233), color(204, 204, 245), fastPunch);
+/* --------------- Create buttons and add to respective arrays -------------- */
+  let b1 = new Button(weight / 3, height / 3 - spacing, 200, 80, color(102, 51, 153), color(153, 102, 204), arcadeRetroSong);
+  let b2 = new Button(weight / 2, height / 3 - spacing, 200, 80, color(75, 0, 130), color(138, 43, 226), barking);
+  let b3 = new Button(2 * weight / 3, height / 3 - spacing, 200, 80, color(123, 104, 238), color(147, 112, 219), fastPunch);
 
-  let b4 = new Button(weight / 3, height / 2, 200, 80, color(205, 92, 92), color(240, 128, 128), fastTransition);
-  let b5 = new Button(weight / 2, height / 2, 200, 80, color(72, 209, 204), color(175, 238, 238), retroNotif);
-  let b6 = new Button(2 * weight / 3, height / 2, 200, 80, color(255, 215, 0), color(255, 255, 0), roar);
+  let b4 = new Button(weight / 3, height / 2, 200, 80, color(186, 85, 211), color(218, 112, 214), fastTransition);
+  let b5 = new Button(weight / 2, height / 2, 200, 80, color(148, 0, 211), color(186, 85, 211), retroNotif);
+  let b6 = new Button(2 * weight / 3, height / 2, 200, 80, color(138, 43, 226), color(153, 50, 204), roar);
 
-  let b7 = new Button(weight / 3, 2 * height / 3 + spacing, 200, 80, color(255, 163, 175), color(255, 214, 220), toyWhistle);
-  let b8 = new Button(weight / 2, 2 * height / 3 + spacing, 200, 80, color(143, 45, 86), color(216, 131, 166), transition);
-  let b9 = new Button(2 * weight / 3, 2 * height / 3 + spacing, 200, 80, color(236, 78, 32), color(234, 162, 133), whoosh);
+  let b7 = new Button(weight / 3, 2 * height / 3 + spacing, 200, 80, color(147, 112, 219), color(123, 104, 238), toyWhistle);
+  let b8 = new Button(weight / 2, 2 * height / 3 + spacing, 200, 80, color(153, 50, 204), color(186, 85, 211), transition);
+  let b9 = new Button(2 * weight / 3, 2 * height / 3 + spacing, 200, 80, color(218, 112, 214), color(186, 85, 211), whoosh);
 
   btn_top.push(b1);
   btn_top.push(b2);
@@ -56,8 +59,10 @@ function setup() {
 }
 
 function draw() {
-  background(247, 178, 183);
+  background(230, 215, 255);
   noStroke();
+
+  /* ---------------------------- Display buttons ---------------------------- */
   for (let i = 0; i < btn_top.length; i++) {
     btn_top[i].show();
     btn_middle[i].show();
@@ -65,6 +70,7 @@ function draw() {
   }
 }
 
+  /* -------------------------- Check for button clicks ------------------------- */
 function mousePressed() {
   for (let i = 0; i < btn_top.length; i++) {
     btn_top[i].clicked(mouseX, mouseY);
@@ -73,6 +79,7 @@ function mousePressed() {
   }
 }
 
+  /* -------------------------- Reset button positions ------------------------- */
 function mouseReleased() {
   let spacing = 20;
   for (let i = 0; i < btn_top.length; i++) {
@@ -86,14 +93,15 @@ class Button {
   constructor(x, y, w, h, color, accent, sound) {
     this.x = x;
     this.y = y;
-    this.w= w;
+    this.w = w;
     this.h = h;
     this.color = color;
     this.accent = accent;
     this.sound = sound;
   }
 
-  show()  {
+  /* ---------------------------- Draw button shapes ---------------------------- */
+  show() {
     noStroke();
     fill(this.color);
     rect((this.x - 100), this.y, this.w, 50);
@@ -103,11 +111,11 @@ class Button {
 
     fill(this.color);
     arc(this.x, (this.y + 50), this.w, this.h, TWO_PI, PI);
-    }
+  }
 
+  /* -------------------------- Check for button clicks ------------------------- */
   clicked(px, py) {
     let d = dist(px, py, this.x, this.y);
-
     if (d < this.w / 2) {
       this.y = this.y + 10;
       this.sound.play();
