@@ -13,6 +13,8 @@
     - [CSS Styling](#css-styling)
   - [Contributing](#contributing)
   - [Acknowledgements and glossary](#acknowledgements-and-glossary)
+    - [Acknowledgements](#acknowledgements)
+    - [Glossary](#glossary)
   
 </details>
 
@@ -87,20 +89,14 @@ Thank you.
 
 ## Acknowledgements and glossary
 
-<details>
-  <summary>Acknowledgements</summary>
+### Acknowledgements
 
 - [p5.js](https://p5js.org/) - The library used for rendering and sound playback.
 - [Favicon.io](https://favicon.io/) - For providing icons used in the project.
 - [Mixkit](https://mixkit.co/free-sound-effects/) - For providing sound effects used in the project.
 - [Codedex](https://www.codedex.io/projects/build-an-interactive-soundboard-with-p5js) - For providing the project idea and structure.
 
-</details>
-
-<details>
-  <summary>Glossary</summary>
+### Glossary
 
 [^1]: A sound board is a device or software application that allows users to play various sound effects by clicking on buttons.
 [^2]: p5.js is a JavaScript library for creative coding.
-
-</details>
